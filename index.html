@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLP Construction's - Logistics Billing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="welcome-styles.css">
+    <link rel="stylesheet" href="invoice-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-background">
+                <div class="header-overlay"></div>
+            </div>
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="company-info">
+                        <h1 class="company-name">BLP CONSTRUCTION'S</h1>
+                        <p class="owner-name">👤 Owner: SWAPNIL PANDEY</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn active" data-page="welcome">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                    <button class="nav-btn" data-page="dashboard">
+                        <i class="fas fa-chart-line"></i> Dashboard
+                    </button>
+                    <button class="nav-btn" data-page="trucks">
+                        <i class="fas fa-truck-moving"></i> Trucks
+                    </button>
+                    <button class="nav-btn" data-page="trips">
+                        <i class="fas fa-map-location-dot"></i> Trips
+                    </button>
+                    <button class="nav-btn" data-page="invoices">
+                        <i class="fas fa-file-invoice-dollar"></i> Invoices
+                    </button>
+                    <button class="nav-btn" data-page="pending">
+                        <i class="fas fa-money-bill-wave"></i> Pending Dues
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Page -->
+            <div id="welcome" class="page active">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1 class="hero-title">BLP Constructions</h1>
+                        <p class="hero-tagline">Building Your Dreams with Strength & Trust</p>
+                        <div class="hero-info">
+                            <p><i class="fas fa-user"></i> <strong>Owner:</strong> Swapnil Pandey</p>
+                            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91-9359022700</p>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="scrollToSection('contact-section')">
+                                <i class="fas fa-phone"></i> Contact Us
+                            </button>
+                            <button class="btn-secondary" onclick="scrollToSection('about-section')">
+                                <i class="fas fa-info-circle"></i> Learn More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Construction site">
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <section class="features-section">
+                    <h2>Why Choose BLP Constructions?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-hammer-and-wrench"></i></div>
+                            <h3>Quality Construction</h3>
+                            <p>Premium materials and expert craftsmanship in every project</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-users"></i></div>
+                            <h3>Experienced Team</h3>
+                            <p>Skilled engineers, architects, and professionals on every project</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                            <h3>On-Time Delivery</h3>
+                            <p>Committed to timelines and deadline schedules</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+                            <h3>Affordable Pricing</h3>
+                            <p>Competitive rates without compromising quality</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about-section" class="about-section">
+                    <div class="about-content">
+                        <h2>About BLP Constructions</h2>
+                        <p>BLP Constructions is a growing and trusted construction company based in Chhattisgarh. We specialize in residential homes, commercial buildings, renovation projects, and interior works.</p>
+                        <p>With years of practical experience and a skilled team of engineers, architects, and labor professionals, we ensure every project is built with precision, safety, and durability.</p>
+                        
+                        <div class="mission-vision">
+                            <div class="mission">
+                                <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                                <p>To deliver high-quality construction services with honesty, innovation, and customer satisfaction.</p>
+                            </div>
+                            <div class="vision">
+                                <h3><i class="fas fa-star"></i> Our Vision</h3>
+                                <p>To become one of the most reliable construction companies in Chhattisgarh known for excellence and trust.</p>
+                            </div>
+                        </div>
+
+                        <div class="company-details">
+                            <div class="detail-card">
+                                <h4><i class="fas fa-map-pin"></i> Location</h4>
+                                <p>Chhattisgarh, India</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><i class="fas fa-briefcase"></i> Services</h4>
+                                <p>Residential, Commercial, Renovation</p>
+                            </div>
+                            <div class="detail-card">
+                                <h4><i class="fas fa-award"></i> Experience</h4>
+                                <p>10+ Years in Construction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1504328081919-18d3e4b88212?w=500&h=400&fit=crop" alt="Construction team">
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact-section" class="contact-section">
+                    <h2>Get In Touch</h2>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>Belsari Takhatpur,Bilaspur,Chhattisgarh, India</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>+91-9359022700 </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>shinil2519@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Working Hours</strong>
+                                    <p>Mon – Sat (9 AM – 6 PM)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Your Name</label>
+                                <input type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" placeholder="+91-XXXXXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-home"></i> Project Type</label>
+                                <select required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="residential">Residential Building</option>
+                                    <option value="commercial">Commercial Building</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="interior">Interior Work</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-message"></i> Message</label>
+                                <textarea placeholder="Tell us about your project..." required rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <!-- Dashboard Page -->
+            <div id="dashboard" class="page">
+                <div class="page-title-section">
+                    <h2><i class="fas fa-gauge"></i> Dashboard Overview</h2>
+                    <p class="subtitle">Real-time construction logistics statistics</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon trips-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Total Trips</h3>
+                        <p class="stat-value" id="totalTrips">0</p>
+                        <p class="stat-subtitle">Completed journeys</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon earnings-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Total Earnings</h3>
+                        <p class="stat-value amount" id="totalEarnings">₹0</p>
+                        <p class="stat-subtitle">Revenue generated</p>
+                    </div>
+                    <div class="stat-card danger">
+                        <div class="stat-icon pending-icon">
+                            <i class="fas fa-hourglass-end"></i>
+                        </div>
+                        <h3>Pending Amount</h3>
+                        <p class="stat-value amount" id="totalPending">₹0</p>
+                        <p class="stat-subtitle">Due for payment</p>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="stat-icon paid-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Paid Trips</h3>
+                        <p class="stat-value" id="paidTrips">0</p>
+                        <p class="stat-subtitle">Completed payments</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-history"></i> Recent Trips
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-id-badge"></i> Trip ID</th>
+                            <th><i class="fas fa-truck"></i> Truck</th>
+                            <th><i class="fas fa-location-dot"></i> Route</th>
+                            <th><i class="fas fa-weight"></i> Weight</th>
+                            <th><i class="fas fa-tags"></i> Amount</th>
+                            <th><i class="fas fa-info-circle"></i> Status</th>
+                            <th><i class="fas fa-exclamation"></i> Pending</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTripsBody">
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: #999;">No trips yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Trucks Page -->
+            <div id="trucks" class="page">
+                <div class="page-title-section">
+                    <h2><i class="fas fa-truck-moving"></i> Manage Trucks</h2>
+                    <p class="subtitle">Add, edit, and monitor your fleet</p>
+                </div>
+                <div class="page-header">
+                    <div></div>
+                    <button class="btn-primary" onclick="openAddTruckModal()">
+                        <i class="fas fa-plus"></i> Add Truck
+                    </button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-code"></i> Truck Number</th>
+                            <th><i class="fas fa-tag"></i> Name</th>
+                            <th><i class="fas fa-weight"></i> Capacity</th>
+                            <th><i class="fas fa-power-off"></i> Status</th>
+                            <th><i class="fas fa-tools"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trucksTableBody">
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: #999;">No trucks added</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Trips Page -->
+            <div id="trips" class="page">
+                <div class="page-title-section">
+                    <h2><i class="fas fa-map-location-dot"></i> Manage Trips</h2>
+                    <p class="subtitle">Track and manage all your trips</p>
+                </div>
+                <div class="page-header">
+                    <div></div>
+                    <button class="btn-primary" onclick="openAddTripModal()">
+                        <i class="fas fa-plus"></i> Add Trip
+                    </button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-id-badge"></i> Trip ID</th>
+                            <th><i class="fas fa-truck"></i> Truck</th>
+                            <th><i class="fas fa-user"></i> Customer</th>
+                            <th><i class="fas fa-location-dot"></i> Loading Point</th>
+                            <th><i class="fas fa-map-pin"></i> Unloading Point</th>
+                            <th><i class="fas fa-calendar"></i> Date</th>
+                            <th><i class="fas fa-weight"></i> Weight</th>
+                            <th><i class="fas fa-tags"></i> Amount/Trip</th>
+                            <th><i class="fas fa-calculator"></i> Total Amount</th>
+                            <th><i class="fas fa-info-circle"></i> Status</th>
+                            <th><i class="fas fa-print"></i> Print</th>
+                            <th><i class="fas fa-rupee-sign"></i> Pending</th>
+                            <th><i class="fas fa-tools"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tripsTableBody">
+                        <tr>
+                            <td colspan="13" style="text-align: center; color: #999;">No trips added</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Invoices Page -->
+            <div id="invoices" class="page">
+                <div class="page-title-section">
+                    <h2><i class="fas fa-file-invoice-dollar"></i> Generate Invoice</h2>
+                    <p class="subtitle">Create professional project invoices</p>
+                </div>
+                <div class="page-header">
+                    <div></div>
+                    <button class="btn-primary" onclick="openCreateInvoiceModal()">
+                        <i class="fas fa-plus"></i> Create New Invoice
+                    </button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-hashtag"></i> Invoice #</th>
+                            <th><i class="fas fa-user"></i> Client</th>
+                            <th><i class="fas fa-briefcase"></i> Project</th>
+                            <th><i class="fas fa-calendar"></i> Date</th>
+                            <th><i class="fas fa-rupee-sign"></i> Total Amount</th>
+                            <th><i class="fas fa-check"></i> Paid</th>
+                            <th><i class="fas fa-exclamation"></i> Balance</th>
+                            <th><i class="fas fa-tools"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoicesTableBody">
+                        <tr>
+                            <td colspan="8" style="text-align: center; color: #999;">No invoices created</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="pending" class="page">
+                <div class="page-title-section">
+                    <h2><i class="fas fa-money-bill-wave"></i> Pending Dues</h2>
+                    <p class="subtitle">Track all outstanding payments</p>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-id-badge"></i> Trip ID</th>
+                            <th><i class="fas fa-truck"></i> Truck</th>
+                            <th><i class="fas fa-user"></i> Customer</th>
+                            <th><i class="fas fa-route"></i> Route</th>
+                            <th><i class="fas fa-tags"></i> Total Amount</th>
+                            <th><i class="fas fa-check"></i> Paid Amount</th>
+                            <th><i class="fas fa-hourglass-end"></i> Pending</th>
+                            <th><i class="fas fa-credit-card"></i> Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pendingTableBody">
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: #999;">No pending dues</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Truck Modal -->
+    <div id="truckModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="truckModalTitle">
+                    <i class="fas fa-truck-moving"></i> Add New Truck
+                </h2>
+                <span class="close" onclick="closeModal('truckModal')">&times;</span>
+            </div>
+            <form id="truckForm" onsubmit="saveTruck(event)">
+                <input type="hidden" id="truckId">
+                <div class="form-group">
+                    <label><i class="fas fa-id-card"></i> Truck Number *</label>
+                    <input type="text" id="truckNumber" required placeholder="e.g., DL-01-AB-1234">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-tag"></i> Truck Name</label>
+                    <input type="text" id="truckName" placeholder="e.g., Dumper Truck 1">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-weight"></i> Capacity (Tons)</label>
+                    <input type="number" id="truckCapacity" step="0.1" placeholder="e.g., 10">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-power-off"></i> Status</label>
+                    <select id="truckStatus">
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Save Truck
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add/Edit Trip Modal -->
+    <div id="tripModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="tripModalTitle">
+                    <i class="fas fa-map-location-dot"></i> Add New Trip
+                </h2>
+                <span class="close" onclick="closeModal('tripModal')">&times;</span>
+            </div>
+            <form id="tripForm" onsubmit="saveTrip(event)">
+                <input type="hidden" id="tripId">
+                <div class="form-group">
+                    <label><i class="fas fa-truck"></i> Truck *</label>
+                    <select id="tripTruck" required>
+                        <option value="">Select a truck</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Customer Name *</label>
+                    <input type="text" id="customerName" placeholder="Customer full name">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Customer Phone</label>
+                    <input type="text" id="customerPhone" placeholder="e.g., +91-9876543210">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Customer Address</label>
+                    <input type="text" id="customerAddress" placeholder="Customer address">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-location-dot"></i> Loading Location *</label>
+                    <input type="text" id="loadingLocation" required placeholder="e.g., Cement Factory, Delhi">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-pin"></i> Unloading Location *</label>
+                    <input type="text" id="unloadingLocation" required placeholder="e.g., Construction Site, Bangalore">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Loading Date *</label>
+                    <input type="date" id="loadingDate" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Unloading Date *</label>
+                    <input type="date" id="unloadingDate" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-box"></i> Material Type</label>
+                    <input type="text" id="materialType" placeholder="e.g., Sand, Cement, Stones, Bricks">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-weight"></i> Weight (Tons) *</label>
+                    <input type="number" id="weight" step="0.1" required placeholder="e.g., 15.5">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-rupee-sign"></i> Amount per Trip (₹) *</label>
+                    <input type="number" id="amount" step="0.01" required placeholder="e.g., 5000">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-list-ol"></i> Number of Trips</label>
+                    <input type="number" id="numberOfTrips" step="1" min="1" placeholder="e.g., 1">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-rupee-sign"></i> Total Trip Amount (₹)</label>
+                    <input type="number" id="totalAmount" step="0.01" readonly placeholder="Calculated from amount × trips">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-check"></i> Amount Paid (₹)</label>
+                    <input type="number" id="amountPaid" step="0.01" value="0" placeholder="e.g., 2500">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-sticky-note"></i> Notes</label>
+                    <textarea id="tripNotes" placeholder="Additional notes..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Save Trip
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>
+                    <i class="fas fa-credit-card"></i> Record Payment
+                </h2>
+                <span class="close" onclick="closeModal('paymentModal')">&times;</span>
+            </div>
+            <form id="paymentForm" onsubmit="recordPayment(event)">
+                <input type="hidden" id="paymentTripId">
+                <div class="form-group">
+                    <label><i class="fas fa-rupee-sign"></i> Amount to Pay (₹)</label>
+                    <input type="number" id="paymentAmount" step="0.01" required placeholder="Enter payment amount">
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-check-circle"></i> Record Payment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Invoice Modal -->
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h2 id="invoiceModalTitle">
+                    <i class="fas fa-file-invoice-dollar"></i> Create New Invoice
+                </h2>
+                <span class="close" onclick="closeModal('invoiceModal')">&times;</span>
+            </div>
+            <form id="invoiceForm" onsubmit="saveInvoice(event)">
+                <!-- Company Details (Auto-filled) -->
+                <fieldset>
+                    <legend>Company Details</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input type="text" value="BLP Constructions" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="blpconstructions@email.com" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" value="Chhattisgarh, India" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" value="+91-9993643235" readonly>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Client Details -->
+                <fieldset>
+                    <legend>Client Details</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Client Name *</label>
+                            <input type="text" id="invoiceClientName" required placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Contact Number</label>
+                            <input type="text" id="invoiceClientPhone" placeholder="Phone number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Address</label>
+                            <input type="text" id="invoiceClientAddress" placeholder="Client address">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Invoice Information -->
+                <fieldset>
+                    <legend>Invoice Information</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-hashtag"></i> Invoice Number *</label>
+                            <input type="text" id="invoiceNumber" required placeholder="e.g., INV-001" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar"></i> Invoice Date *</label>
+                            <input type="date" id="invoiceDate" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar-check"></i> Due Date</label>
+                            <input type="date" id="invoiceDueDate">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-briefcase"></i> Project Name *</label>
+                            <input type="text" id="invoiceProject" required placeholder="e.g., Residential Complex A">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Work Details -->
+                <fieldset>
+                    <legend>Work Details</legend>
+                    <div id="workItemsContainer">
+                        <div class="work-item">
+                            <div class="work-item-row">
+                                <div class="form-group">
+                                    <label>Description *</label>
+                                    <input type="text" class="work-description" placeholder="e.g., Foundation Work" required>
+                                </div>
+                                <div class="form-group" style="max-width: 100px;">
+                                    <label>Quantity</label>
+                                    <input type="number" class="work-quantity" step="0.1" value="1" min="1" required>
+                                </div>
+                                <div class="form-group" style="max-width: 120px;">
+                                    <label>Rate (₹)</label>
+                                    <input type="number" class="work-rate" step="0.01" placeholder="0" required>
+                                </div>
+                                <div class="form-group" style="max-width: 120px;">
+                                    <label>Amount (₹)</label>
+                                    <input type="number" class="work-amount" step="0.01" readonly>
+                                </div>
+                                <button type="button" class="btn-danger" onclick="removeWorkItem(this)" style="align-self: flex-end;">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-secondary" onclick="addWorkItem()">
+                        <i class="fas fa-plus"></i> Add Item
+                    </button>
+                </fieldset>
+
+                <!-- Payment Summary -->
+                <fieldset>
+                    <legend>Payment Summary</legend>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <label>Subtotal (₹)</label>
+                            <input type="number" id="invoiceSubtotal" step="0.01" readonly>
+                        </div>
+                        <div class="summary-item">
+                            <label>GST % (optional)</label>
+                            <input type="number" id="invoiceGST" step="0.01" value="0" min="0" placeholder="0">
+                        </div>
+                        <div class="summary-item">
+                            <label>GST Amount (₹)</label>
+                            <input type="number" id="invoiceGSTAmount" step="0.01" readonly>
+                        </div>
+                        <div class="summary-item">
+                            <label><strong>Total (₹)</strong></label>
+                            <input type="number" id="invoiceTotal" step="0.01" readonly>
+                        </div>
+                    </div>
+                    <div class="summary-grid" style="margin-top: 20px;">
+                        <div class="summary-item">
+                            <label>Amount Paid (₹)</label>
+                            <input type="number" id="invoiceAmountPaid" step="0.01" value="0">
+                        </div>
+                        <div class="summary-item">
+                            <label><strong>Balance Due (₹)</strong></label>
+                            <input type="number" id="invoiceBalance" step="0.01" readonly>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Payment Methods -->
+                <fieldset>
+                    <legend>Payment Methods</legend>
+                    <div class="payment-methods">
+                        <div class="method-card">
+                            <h4><i class="fas fa-mobile-alt"></i> UPI</h4>
+                            <input type="text" id="invoiceUPI" placeholder="UPI ID">
+                        </div>
+                        <div class="method-card">
+                            <h4><i class="fas fa-university"></i> Bank Details</h4>
+                            <input type="text" id="invoiceBankName" placeholder="Bank Name">
+                            <input type="text" id="invoiceAccountNumber" placeholder="Account Number">
+                            <input type="text" id="invoiceIFSC" placeholder="IFSC Code">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Generate Invoice
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Invoice Display Modal -->
+    <div id="invoiceViewModal" class="modal">
+        <div class="modal-content modal-invoice">
+            <div class="invoice-header">
+                <button class="close" onclick="closeModal('invoiceViewModal')">&times;</button>
+                <button class="btn-info" onclick="printInvoice()">Print Invoice</button>
+            </div>
+            <div id="invoiceContent" class="invoice-content">
+                <!-- Invoice will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
